@@ -15,6 +15,3 @@ before_script:
 script:
   - ls
   - pwd
-#  - symfony-demo/configuator.sh
-#  - cd symfony-demo/symfony-demo
-#  - ./docker.sh "${PROJECT_COMMAND}"
