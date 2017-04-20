@@ -15,4 +15,5 @@ before_script:
 script:
   - chmod +x symfony-demo/configurator.sh
   - symfony-demo/configurator.sh
-  - symfony-demo/symfony-demo/docker.sh "${PROJECT_COMMAND}"
+  - cd symfony-demo/symfony-demo
+  - ./docker.sh "${PROJECT_COMMAND}"
