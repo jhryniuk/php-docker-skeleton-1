@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="demo" default="build">
+    <target name="build"
+            depends="phpunit"
+    />
+
+    <target name="phpunit"
+            unless="phpunit.done"
+            description="Run phpunit">
+        <exec executable="vendor/bin/phpunit">
+        </exec>
+
+        <property name="phpunit.done" value="true"/>
+    </target>
+ </project>
+
