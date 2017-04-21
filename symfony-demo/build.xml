@@ -7,10 +7,9 @@
     <target name="phpunit"
             unless="phpunit.done"
             description="Run phpunit">
-        <exec executable="vendor/bin/phpunit">
+        <exec executable="vendor/bin/phpunit" checkreturn="true">
         </exec>
 
         <property name="phpunit.done" value="true"/>
     </target>
- </project>
-
+</project>
