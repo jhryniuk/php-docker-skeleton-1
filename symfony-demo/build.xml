@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="demo" default="build">
+<project name="demo" default="build" basedir=".">
+    <property name="phpunit" value="${application.startdir}/vendor/bin/phpunit"/>
     <target name="build"
             depends="phpunit"
     />
@@ -7,9 +8,7 @@
     <target name="phpunit"
             unless="phpunit.done"
             description="Run phpunit">
-        <exec executable="vendor/bin/phpunit" checkreturn="true">
-        </exec>
-
+        <exec executable="${phpunit}" passthru="true"></exec>
         <property name="phpunit.done" value="true"/>
     </target>
 </project>
